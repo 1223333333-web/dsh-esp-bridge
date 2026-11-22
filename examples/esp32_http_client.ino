@@ -11,6 +11,8 @@
 const char* WIFI_SSID = "YOUR_WIFI_SSID";
 const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
 const char* DSH_URL   = "http://192.168.1.100:8124/esp/ask";
+// Leave empty if authToken is not configured on the PC side.
+const char* DSH_TOKEN = "";
 
 String escapeJson(String s) {
   s.replace("\\", "\\\\");
@@ -29,6 +31,9 @@ void askDSH(const String& text) {
   HTTPClient http;
   http.begin(DSH_URL);
   http.addHeader("Content-Type", "application/json");
+  if (strlen(DSH_TOKEN) > 0) {
+    http.addHeader("Authorization", String("Bearer ") + DSH_TOKEN);
+  }
   http.setTimeout(200000);  // DSH may take a while; longer than waitMs
 
   String body = "{\"text\":\"" + escapeJson(text) + "\"}";

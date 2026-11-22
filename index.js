@@ -362,6 +362,7 @@ export function apply(ctx, config = {}) {
     waitMs: Number(config.waitMs ?? 180000),
     personaPath: config.personaPath ?? join(homedir(), '.dsh', 'esp-persona.txt'),
     cwd: config.cwd ?? process.cwd(),
+    authToken: String(config.authToken ?? ''),
   }
   if (config.logFile) LOG = config.logFile
 
@@ -387,6 +388,11 @@ export function apply(ctx, config = {}) {
           }
 
           const url = new URL(req.url ?? '/', 'http://127.0.0.1')
+          if (opts.authToken) {
+            const header = String(req.headers?.authorization ?? '')
+            const got = header.replace(/^Bearer\s+/i, '').trim() || url.searchParams.get('token') || ''
+            if (got !== opts.authToken) return json(res, 401, { ok: false, error: 'unauthorized' })
+          }
           const sub = url.pathname.slice(ROUTE.length) || '/'
 
           if (sub === '/newvoice') {

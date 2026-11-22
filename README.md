@@ -83,6 +83,7 @@ esp-bridge 已注册路由 /esp，sessionsRoot=...
       config:
         # sessionsRoot: 'C:\\Users\\you\\.dsh\\sessions'
         # sessionId: ''
+        # authToken: 'change-me'
         waitMs: 180000
         # logFile: 'C:\\Users\\you\\.dsh\\esp-bridge.log'
         # personaPath: 'C:\\Users\\you\\.dsh\\esp-persona.txt'
@@ -97,13 +98,14 @@ esp-bridge 已注册路由 /esp，sessionsRoot=...
 | `logFile` | `~/.dsh/esp-bridge.log` | 日志文件 |
 | `personaPath` | `~/.dsh/esp-persona.txt` | `/esp/newvoice` 使用的人格提示词文件；不存在则忽略 |
 | `cwd` | 当前进程目录 | 新建语音会话时使用的工作目录，建议显式设置 |
+| `authToken` | 空 | 可选的 Bearer Token；设置后所有 `/esp/*` 请求都要带 `Authorization: Bearer ...` 或 `?token=...` |
 
 ## 使用示例
 
 ### 自检
 
 ```bash
-curl http://127.0.0.1:8124/esp/ping
+curl -H "Authorization: Bearer YOUR_TOKEN" http://127.0.0.1:8124/esp/ping
 ```
 
 ### GET 投一句话

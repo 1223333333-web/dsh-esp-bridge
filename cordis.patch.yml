@@ -6,6 +6,7 @@
       config:
         # sessionsRoot: 'C:\\Users\\you\\.dsh\\sessions'
         # sessionId: ''
+        # authToken: 'change-me'
         waitMs: 180000
         # logFile: 'C:\\Users\\you\\.dsh\\esp-bridge.log'
         # personaPath: 'C:\\Users\\you\\.dsh\\esp-persona.txt'
