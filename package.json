@@ -1,0 +1,34 @@
+{
+  "name": "dsh-esp-bridge",
+  "version": "0.1.0",
+  "description": "DSH 插件：给 ESP32 语音终端用的局域网 HTTP 桥（/esp/ping、/esp/ask、/esp/stream）",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "author": "1223333333-web",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "esp32",
+    "voice",
+    "bridge",
+    "http"
+  ],
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "check": "node --check index.js"
+  }
+}

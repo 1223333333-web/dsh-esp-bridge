@@ -1,0 +1,12 @@
+# dsh-esp-bridge: DSH plugin bundle patch.
+# All paths are optional; defaults use ~/.dsh.
+- insert:
+    - id: esp-bridge
+      name: dsh-esp-bridge
+      config:
+        # sessionsRoot: 'C:\\Users\\you\\.dsh\\sessions'
+        # sessionId: ''
+        waitMs: 180000
+        # logFile: 'C:\\Users\\you\\.dsh\\esp-bridge.log'
+        # personaPath: 'C:\\Users\\you\\.dsh\\esp-persona.txt'
+        # cwd: 'C:\\Users\\you\\workspace'
