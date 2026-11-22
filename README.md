@@ -172,6 +172,17 @@ curl -N "http://127.0.0.1:8124/esp/stream?text=写一个一句话笑话"
 - 适用于通过 `webServer` 注册路由、通过 `agents` 访问会话的 DSH 版本。
 - 已在 Windows + DSH 桌面版环境验证。
 
+## 同类项目
+
+- [jimyddd01-coder/dsh-dafeiyu-butler](https://github.com/jimyddd01-coder/dsh-dafeiyu-butler) — DSH 家庭 AI 插件集合，含 persona、家庭记忆、Home Assistant、天气、语音桥和 ESP32 语音终端固件（最接近本项目）
+- [DoYitNow/esp32-rlcd-dsh-agent](https://github.com/DoYitNow/esp32-rlcd-dsh-agent) — ESP32-S3-RLCD-4.2 语音/状态终端，通过 USB/Wi-Fi 接 DSH
+- [hydra-eng/VENUS](https://github.com/hydra-eng/VENUS) — ESP32 + 本地 DeepSeek + Windows 自动化 + Home Assistant 的离线语音助手生态
+- [slinxiaosun-blip/dsh-ai-passport-plugin](https://github.com/slinxiaosun-blip/dsh-ai-passport-plugin) — DSH 任务终端：蓝牙链路、任务桥接、语音识别、桌面挂件
+- [bruc3van/agent-buddy-esp32](https://github.com/bruc3van/agent-buddy-esp32) — 4.3 寸 ESP32-S3 屏，显示 Claude Code / Codex / DSH 状态和额度
+- [WayAero/esp32s3-buddy](https://github.com/WayAero/esp32s3-buddy) — ESP32-S3 桌面 AI 伙伴，支持触摸审批、状态、角色动画和蓝牙校时
+- [Rrttttttt/dsh-beacon](https://github.com/Rrttttttt/dsh-beacon) — DSH 状态灯：DSH 插件 + ESP32-C3 固件
+- [haosuo/vibewatch](https://github.com/haosuo/vibewatch) — M5Stack 手表形态，支持 AI 编程会话状态和按住说话语音输入
 ## License
 
 MIT
+
